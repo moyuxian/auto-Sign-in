@@ -8,11 +8,11 @@ options.add_experimental_option('detach', True)  # 不自动关闭浏览器
 browser = webdriver.Chrome(options=options)
 
 # 打开网页
-url = 'https://vip.taoqitu.pro/index.html'  # 替换成你要签到的网站地址
+url = ''  # 替换成你要签到的网站地址
 browser.get(url)
 
-username = '154030812@qq.com'
-password = 'MJ000713_'
+username = ''
+password = ''
 browser.find_element(By.ID, 'regusername').send_keys(username)
 browser.find_element(By.ID, 'regpassword').send_keys(password)
 browser.find_element(By.CLASS_NAME, 'loginbutton').click()
