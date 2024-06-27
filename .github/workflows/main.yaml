@@ -26,8 +26,8 @@ jobs:
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: main.py
-      - name: Commit and Push The Results From  Action
+        run: python main.py
+      - name: Commit and Push The Results From Action
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "154030812+github-actions[bot]@users.noreply.github.com"
