@@ -13,7 +13,7 @@ display.start()
 chromedriver_autoinstaller.install()
 # 创建一个 Chrome 浏览器实例
 options = webdriver.ChromeOptions()
-options.add_argument('--window-size=800x600')
+options.add_argument('--window-size=1920x1080')
 options.add_experimental_option('detach', True)  # 不自动关闭浏览器
 browser = webdriver.Chrome(options=options)
 
