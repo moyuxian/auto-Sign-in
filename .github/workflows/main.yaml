@@ -28,9 +28,8 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: python main.py
       - name: Commit and Push The Results From Action
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "154030812+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "GitHub Actions Results added"
-          git push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: Show GitHub Actions logo
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
