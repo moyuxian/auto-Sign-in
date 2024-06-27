@@ -26,11 +26,17 @@ password = os.environ.get('PASSWORD')
 browser.find_element(By.ID, 'regusername').send_keys(username)
 browser.find_element(By.ID, 'regpassword').send_keys(password)
 browser.find_element(By.CLASS_NAME, 'loginbutton').click()
-time.sleep(15)
-browser.find_element(By.CLASS_NAME, 'gonggao_tan_button').click()
-browser.find_element(By.CLASS_NAME, 'qiandao').click()
-time.sleep(15)
-browser.find_element(By.CLASS_NAME, 'invite_get_amount').click()
+time.sleep(5)
+
+if browser.find_element(By.CLASS_NAME, 'gonggao_tan_button')!=[]:
+    browser.find_element(By.CLASS_NAME, 'gonggao_tan_button').click()
+
+if browser.find_element(By.CLASS_NAME, 'qiandao')!=[]:
+    browser.find_element(By.CLASS_NAME, 'qiandao').click()
+time.sleep(5)
+
+if browser.find_element(By.CLASS_NAME, 'invite_get_amount')!=[]:
+    browser.find_element(By.CLASS_NAME, 'invite_get_amount').click()
 now = datetime.datetime.now()
 timestamp = now.strftime('%Y%m%d_%H%M%S')
 filename = timestamp + '.png'
