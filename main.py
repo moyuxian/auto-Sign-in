@@ -21,8 +21,8 @@ browser = webdriver.Chrome(options=options)
 url = 'https://vip.taoqitu.pro/index.html'  # 替换成你要签到的网站地址
 browser.get(url)
 
-username = os.environ.get('USERNAME')
-password = os.environ.get('PASSWORD')
+username = os.environ.get("USERNAME")
+password = os.environ.get("PASSWORD")
 browser.find_element(By.ID, 'regusername').send_keys(username)
 browser.find_element(By.ID, 'regpassword').send_keys(password)
 browser.find_element(By.CLASS_NAME, 'loginbutton').click()
