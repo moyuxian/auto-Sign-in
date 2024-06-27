@@ -34,10 +34,10 @@ browser.find_element(By.ID, 'regpassword').send_keys(password)
 browser.find_element(By.CLASS_NAME, 'loginbutton').click()
 time.sleep(5)
 
-now = datetime.datetime.now()
-timestamp = now.strftime('%Y%m%d_%H%M%S')
-filename = timestamp + '.png'
-browser.save_screenshot(filename)
+# now = datetime.datetime.now()
+# timestamp = now.strftime('%Y%m%d_%H%M%S')
+# filename = timestamp + '.png'
+# browser.save_screenshot(filename)
 
 if browser.find_element(By.CLASS_NAME, 'gonggao_tan_button')!=[]:
     browser.find_element(By.CLASS_NAME, 'gonggao_tan_button').click()
@@ -48,6 +48,7 @@ time.sleep(5)
 
 if browser.find_element(By.CLASS_NAME, 'invite_get_amount')!=[]:
     browser.find_element(By.CLASS_NAME, 'invite_get_amount').click()
+time.sleep(5)
 
 now = datetime.datetime.now()
 timestamp = now.strftime('%Y%m%d_%H%M%S')
