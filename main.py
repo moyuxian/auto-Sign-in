@@ -20,11 +20,12 @@ browser = webdriver.Chrome(options=options)
 # 打开网页
 url = 'https://vip.taoqitu.pro/index.html'  # 替换成你要签到的网站地址
 browser.get(url)
-time.sleep(5)
-now = datetime.datetime.now()
-timestamp = now.strftime('%Y%m%d_%H%M%S')
-filename = timestamp + '.png'
-browser.save_screenshot(filename)
+
+# time.sleep(5)
+# now = datetime.datetime.now()
+# timestamp = now.strftime('%Y%m%d_%H%M%S')
+# filename = timestamp + '.png'
+# browser.save_screenshot(filename)
 
 username = os.environ.get("USERNAME")
 password = os.environ.get("PASSWORD")
@@ -38,18 +39,20 @@ timestamp = now.strftime('%Y%m%d_%H%M%S')
 filename = timestamp + '.png'
 browser.save_screenshot(filename)
 
-# if browser.find_element(By.CLASS_NAME, 'gonggao_tan_button')!=[]:
-#     browser.find_element(By.CLASS_NAME, 'gonggao_tan_button').click()
-#
-# if browser.find_element(By.CLASS_NAME, 'qiandao')!=[]:
-#     browser.find_element(By.CLASS_NAME, 'qiandao').click()
-# time.sleep(5)
-#
-# if browser.find_element(By.CLASS_NAME, 'invite_get_amount')!=[]:
-#     browser.find_element(By.CLASS_NAME, 'invite_get_amount').click()
-# now = datetime.datetime.now()
-# timestamp = now.strftime('%Y%m%d_%H%M%S')
-# filename = timestamp + '.png'
-# browser.save_screenshot(filename)
+if browser.find_element(By.CLASS_NAME, 'gonggao_tan_button')!=[]:
+    browser.find_element(By.CLASS_NAME, 'gonggao_tan_button').click()
+
+if browser.find_element(By.CLASS_NAME, 'qiandao')!=[]:
+    browser.find_element(By.CLASS_NAME, 'qiandao').click()
+time.sleep(5)
+
+if browser.find_element(By.CLASS_NAME, 'invite_get_amount')!=[]:
+    browser.find_element(By.CLASS_NAME, 'invite_get_amount').click()
+
+now = datetime.datetime.now()
+timestamp = now.strftime('%Y%m%d_%H%M%S')
+filename = timestamp + '.png'
+browser.save_screenshot(filename)
+
 browser.quit()
 display.stop()
