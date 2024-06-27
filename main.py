@@ -7,7 +7,7 @@ import time
 import os
 from pyvirtualdisplay import Display
 
-display = Display(visible=0, size=(800, 600))
+display = Display(visible=0, size=(1920, 1080))
 display.start()
 
 chromedriver_autoinstaller.install()
