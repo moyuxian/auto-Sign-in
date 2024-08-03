@@ -53,7 +53,6 @@ time.sleep(5)
 now = datetime.datetime.now()
 timestamp = now.strftime('%Y%m%d_%H%M%S')
 filename = timestamp + '.png'
-browser.save_screenshot(filename)
 
 browser.quit()
 display.stop()
